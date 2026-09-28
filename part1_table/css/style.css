@@ -1,0 +1,92 @@
+/* Зовнішня таблиця стилів для сторінки резюме (ЛР3) */
+/* Контраст кольорів перевірено на WebAIM Contrast Checker */
+
+body {
+  margin: 0 auto;
+  padding: 16px 24px;
+  max-width: 960px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  color: #1f2933;
+  background-color: #f4f6f8;
+}
+
+/* Три рядки стандартного оформлення — кожен своїм кольором */
+.line-student {
+  margin: 0 0 6px;
+  padding: 8px 12px;
+  color: #0d3c61;
+  background-color: #e3f2fd;
+}
+
+.line-lab {
+  margin: 0 0 6px;
+  padding: 8px 12px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #7a3e00;
+  background-color: #fff3e0;
+}
+
+.line-topic {
+  margin: 0 0 24px;
+  padding: 8px 12px;
+  text-align: center;
+  font-style: italic;
+  color: #1b5e20;
+  background-color: #e8f5e9;
+}
+
+.resume-title {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 26px;
+  color: #37474f;
+}
+
+/* Таблиця резюме з двох стовпчиків */
+.resume {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #37474f;
+  background-color: #ffffff;
+}
+
+.resume th,
+.resume td {
+  padding: 6px 12px;
+  border: 1px solid #90a4ae;
+  vertical-align: top;
+}
+
+.resume-name {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background-color: #37474f;
+}
+
+/* Лівий стовпчик — назви полів */
+.resume .label {
+  width: 32%;
+  font-weight: bold;
+  color: #263238;
+  background-color: #eceff1;
+}
+
+/* Рядки-заголовки розділів резюме */
+.resume .section td {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #546e7a;
+}
+
+.resume a {
+  color: #0b5394;
+}
+
+.resume a:hover {
+  color: #7a3e00;
+}

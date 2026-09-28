@@ -1,0 +1,16 @@
+{
+  "name": "resume-lab3-bootstrap",
+  "version": "1.0.0",
+  "description": "ЛР3, частина 2: резюме на блочній верстці з Bootstrap і Sass",
+  "scripts": {
+    "build": "sass scss/style.scss css/style.css --no-source-map",
+    "watch": "sass --watch scss/style.scss css/style.css --no-source-map"
+  },
+  "author": "Vladyslav Melnyk",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.105.0"
+  }
+}

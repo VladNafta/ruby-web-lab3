@@ -1,0 +1,105 @@
+body {
+  background-color: #f5f5f5;
+  color: #263238;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.page {
+  max-width: 900px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.line {
+  margin: 0 0 8px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.line-student {
+  color: #0d3c61;
+  background-color: #e3f2fd;
+}
+
+.line-lab {
+  color: #7a3e00;
+  background-color: #fff3e0;
+}
+
+.line-topic {
+  color: #1b5e20;
+  background-color: #e8f5e9;
+}
+
+.line-lab {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+.line-topic {
+  font-style: italic;
+  text-align: center;
+}
+
+.resume-title {
+  margin: 24px 0 16px;
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.resume {
+  background-color: #ffffff;
+  border: 2px solid #37474f;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.resume .resume-name {
+  padding: 16px;
+  background-color: #37474f;
+  color: #fff;
+  text-align: center;
+}
+.resume .resume-name .name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.resume .resume-name .position {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+.resume .resume-row {
+  margin: 0;
+  border-bottom: 1px solid #b0bec5;
+}
+.resume .resume-row:last-child {
+  border-bottom: none;
+}
+.resume .label,
+.resume .value {
+  padding: 8px 16px;
+}
+.resume .label {
+  background-color: #eceff1;
+  font-weight: 600;
+  border-right: 1px solid #b0bec5;
+}
+.resume .section {
+  padding: 8px 16px;
+  background-color: #546e7a;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.resume a {
+  color: #0b5394;
+  text-decoration: none;
+}
+.resume a:hover {
+  color: #07396a;
+  text-decoration: underline;
+}

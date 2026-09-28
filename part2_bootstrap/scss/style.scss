@@ -1,0 +1,142 @@
+// Власні стилі сторінки резюме (стиль Material Design).
+// Компіляція: npm run build  ->  css/style.css
+
+@use "sass:list";
+
+// кольори з палітри Material Design
+$text:        #263238;  // Blue Grey 900
+$page-bg:     #f5f5f5;  // Grey 100
+$card-bg:     #ffffff;
+$border:      #b0bec5;  // Blue Grey 200
+$label-bg:    #eceff1;  // Blue Grey 50
+$name-bg:     #37474f;  // Blue Grey 800
+$section-bg:  #546e7a;  // Blue Grey 600
+$link:        #0b5394;
+$link-hover:  #07396a;
+$radius:      4px;
+
+// три рядки стандартного оформлення: [клас, колір тексту, колір фону]
+$lines: (
+  student: (#0d3c61, #e3f2fd),  // Blue 50
+  lab:     (#7a3e00, #fff3e0),  // Orange 50
+  topic:   (#1b5e20, #e8f5e9)   // Green 50
+);
+
+// тінь-"підйом" картки, як у Material Design
+@mixin elevation($level) {
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  } @else {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+  }
+}
+
+body {
+  background-color: $page-bg;
+  color: $text;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.page {
+  max-width: 900px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.line {
+  margin: 0 0 8px;
+  padding: 10px 16px;
+  border-radius: $radius;
+  @include elevation(1);
+}
+
+// генеруємо .line-student, .line-lab, .line-topic
+@each $name, $colors in $lines {
+  .line-#{$name} {
+    color: list.nth($colors, 1);
+    background-color: list.nth($colors, 2);
+  }
+}
+
+.line-lab {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+.line-topic {
+  font-style: italic;
+  text-align: center;
+}
+
+.resume-title {
+  margin: 24px 0 16px;
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.resume {
+  background-color: $card-bg;
+  border: 2px solid $name-bg;
+  border-radius: $radius;
+  overflow: hidden;
+  @include elevation(2);
+
+  .resume-name {
+    padding: 16px;
+    background-color: $name-bg;
+    color: #fff;
+    text-align: center;
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .position {
+      font-size: .95rem;
+      opacity: .9;
+    }
+  }
+
+  // рядок "таблиці" з рамкою знизу
+  .resume-row {
+    margin: 0;
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .label,
+  .value {
+    padding: 8px 16px;
+  }
+
+  .label {
+    background-color: $label-bg;
+    font-weight: 600;
+    border-right: 1px solid $border;
+  }
+
+  .section {
+    padding: 8px 16px;
+    background-color: $section-bg;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+
+  a {
+    color: $link;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover;
+      text-decoration: underline;
+    }
+  }
+}
